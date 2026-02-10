@@ -256,3 +256,20 @@ p { font-family: sans-serif; line-height: 1.6; color: #ccc; margin-bottom: 1rem;
     font-size: 0.8rem;
   }
 }
+/* --- NEW DOSSIER PAGE STYLES --- */
+.dossier-page-body {
+  background-color: #050505 !important; /* Force black background */
+  overflow-y: auto !important; /* Allow normal scrolling */
+  padding: 80px 5% 50px 5%; /* Spacing */
+  min-height: 100vh;
+}
+
+.dossier-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Make sure back button looks correct on this page */
+.back-btn {
+  text-decoration: none;
+}
