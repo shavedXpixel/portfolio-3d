@@ -92,12 +92,13 @@ gsap.utils.toArray('.card').forEach(card => {
     y: 0, opacity: 1, duration: 0.8, ease: "power2.out"
   });
 });
+
 // Skill Bar Animation
 gsap.utils.toArray('.skill-per').forEach(bar => {
   gsap.from(bar, {
     scrollTrigger: {
       trigger: bar,
-      start: "top 90%", // Start expanding when near bottom of screen
+      start: "top 90%", 
     },
     width: "0%",
     duration: 1.5,
@@ -128,11 +129,11 @@ dossierTl
 
 // OPEN
 triggerBtn.addEventListener('click', () => {
-  document.body.classList.add('no-scroll'); // Lock Scroll
-  lenis.stop(); // Stop Smooth Scroll
+  document.body.classList.add('no-scroll'); 
+  lenis.stop(); 
   
-  dossierOverlay.classList.add('active'); // Add class for pointer events
-  dossierTl.restart(); // Play GSAP Animation
+  dossierOverlay.classList.add('active'); 
+  dossierTl.restart(); 
   
   if(particlesMesh) particlesMesh.material.color.set('#bd00ff');
 });
@@ -166,33 +167,27 @@ function typeEffect() {
   const currentPhrase = phrases[phraseIndex];
   
   if (isDeleting) {
-    // Delete chars
     typeWriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
     charIndex--;
-    typeSpeed = 50; // Deleting is faster
+    typeSpeed = 50; 
   } else {
-    // Add chars
     typeWriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
     charIndex++;
-    typeSpeed = 100; // Typing speed
+    typeSpeed = 100; 
   }
 
-  // Logic to switch between typing and deleting
   if (!isDeleting && charIndex === currentPhrase.length) {
-    // Finished typing the word
     isDeleting = true;
-    typeSpeed = 2000; // Wait 2 seconds before deleting
+    typeSpeed = 2000; 
   } else if (isDeleting && charIndex === 0) {
-    // Finished deleting the word
     isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length; // Move to next word
-    typeSpeed = 500; // Wait 0.5s before typing next word
+    phraseIndex = (phraseIndex + 1) % phrases.length; 
+    typeSpeed = 500; 
   }
 
   setTimeout(typeEffect, typeSpeed);
 }
 
-// Start the typing loop
 document.addEventListener('DOMContentLoaded', () => {
   if (typeWriterElement) {
     typeEffect();

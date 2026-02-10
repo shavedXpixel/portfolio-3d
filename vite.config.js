@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // 👇 IMPORTANT: Replace 'portfolio-3d' with your EXACT GitHub repository name
-  // If your repo is named something else, change this line!
+  // Replace 'portfolio-3d' if you renamed your GitHub repository!
   base: '/portfolio-3d/', 
   
   build: {
