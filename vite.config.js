@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   // 👇 Keep this matching your GitHub repo name!
-  base: '/portfolio-3d/', 
+  base: '/', 
   
   build: {
     outDir: 'docs', // Output folder for GitHub Pages
