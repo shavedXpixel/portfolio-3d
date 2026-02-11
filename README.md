@@ -2,7 +2,7 @@
 
 A high-performance, immersive 3D portfolio website built with **Three.js** and **Vite**. This project features a cinematic scrolling experience, holographic UI elements, and a hidden developer dossier.
 
-🔗 **Live Demo:** [https://shavedxpixel.github.io/portfolio-3d/](https://shavedxpixel.github.io/portfolio-3d/)
+🔗 **Live Demo:** https://priyansu.me/
 
 ---
 
